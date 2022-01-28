@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function splitArrayIntoChunksOfLen(arr, len) {
+        var chunks = [], i = 0, n = arr.length;
+        while (i < n) {
+          chunks.push(arr.slice(i, i += len));
+        }
+        return chunks;
+      }
+
+    var alphabet=['apple','ball','cat','dog','egg','fox'];
+var alphabetPairs=splitArrayIntoChunksOfLen(alphabet,2);
+console.log(alphabet)
+    </script>
+</body>
+</html>

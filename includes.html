@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      Array.prototype.includes = function(num){
+   for(let i = 0; i < this.length; i++){
+      if(num === this[i]){
+         return true;
+      }
+   }
+   return false;
+}
+
+const arr = [1,2,3,4];
+console.log(arr.includes(3));
+console.log(arr.includes(8));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    Array.prototype.concatinate= function concatinate(arrays) {
+    let arr=[];
+    for(let i = 0; i < arrays.length; i++) {
+       arr.push(this[i]);
+        }
+        arr.push(...arr)
+    return arr;
+}
+const ar1 = ["Welcome", "to", "jaavascript"];
+const ar2 = ["It", "is", "awesome"];
+
+console.log(ar1.concatinate(ar2));
+
+
+    </script>
+</body>
+</html>

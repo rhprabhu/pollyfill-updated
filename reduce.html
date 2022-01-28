@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      function myReduce(callback, initialValue) {
+    var k = 0;
+    var acc = initialValue;
+
+    while (k < this.length) {
+
+        acc = callback(acc, this[k], k, this);
+
+        k++; // increment k
+    }
+
+    return acc;
+}
+
+
+function sum(a, b) {
+    return a + b
+}
+
+let arr=[1, 2, 3];
+console.log(arr.myReduce(sum));
+
+    </script>
+</body>
+</html>

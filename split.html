@@ -8,17 +8,25 @@
 </head>
 <body>
     <script>
-    function splitArrayIntoChunksOfLen(arr, len) {
-        var chunks = [], i = 0, n = arr.length;
-        while (i < n) {
-          chunks.push(arr.slice(i, i += len));
+        String.prototype.splitFunc = function(item){
+            let string= "";
+            let arr= [];
+            for(let i=0; i< this.length; i++){
+                if(this[i] != item){
+                    string+= this[i];
+                    if(this[i+1]==item || i==this.length-1){
+                        arr.push(string);
+                        string=" ";
+                    }
+                }
+            }
+            return arr;
         }
-        return chunks;
-      }
 
-    var alphabet=['apple','ball','cat','dog','egg','fox'];
-var alphabetPairs=splitArrayIntoChunksOfLen(alphabet,2);
-console.log(alphabet)
+const arr1 = "welcome ,to ,javascript";
+const arr2 = "its is awesome";
+const words= arr1.splitFunc(",");
+console.log(words);
     </script>
 </body>
 </html>
